@@ -1,24 +1,20 @@
+const input = document.querySelector("input")
+const button = document.querySelector("button")
 const form = document.querySelector("form")
 
+
 form.addEventListener("submit", (event) =>{
-    event.preventDefault()
+        event.preventDefault()
+        const value = input.value
+        const guests = document.querySelector("ul")
 
-    console.log("Olá")
-})
+        const newGuest = document.createElement("li")
+        newGuest.classList.add("guest")
 
-// keydown > quando uma tecla é pressionada (captura tudo: ctrl, shift...)
+        const guestName = document.createElement("span")
+        guestName.textContent = value[0].toUpperCase() + value.slice(1)
 
-const input = document.querySelector("input")
-// input.addEventListener("keydown", (event) =>{
-//     console.log(event.key)
-// })
-
-
-// Ignora tudo que não é caracter
-input.addEventListener("keypress", (event) =>{
-    console.log(event)
-})
-
-input.addEventListener("change", (event) =>{
-    console.log("O input mudou")
+        newGuest.append(guestName)
+        guests.prepend(newGuest)
+        form.reset()
 })
