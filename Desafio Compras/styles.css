@@ -1,0 +1,60 @@
+body{
+    background-color: #F4F5FB;
+}
+
+header{
+    text-align: center;
+    font-size: 35px;
+}
+
+h1 {
+    padding-left: 370px;
+    font-size: 35px;
+}
+
+form {
+    padding-left: 370px;
+}
+
+input{
+    width: 651px;
+    height: 44px;
+    border-radius: 12px;
+}
+
+button{
+    
+    width: 160px;
+    height: 44px;
+    border-radius: 12px;
+    font-size: 20px;
+}
+
+ul{
+    padding-right: 370px;
+    padding-top: 40px;
+    padding-left: 370px;
+    font-size: 20px;
+}
+
+li{
+    padding-right: 370px;
+    padding-bottom: 12px;
+    border-color: rgb(0, 0, 0);
+    border: 10px;
+    width: 627px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 12px;
+    list-style: circle ;
+
+}
+
+#removed{
+    display: block;
+}
+
+footer{
+    padding-left: 370px;
+    width: 600px;
+    background-color: red;
+}
