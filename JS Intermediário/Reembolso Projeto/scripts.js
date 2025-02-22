@@ -1,10 +1,11 @@
 const form = document.querySelector("form")
-
+let total = document.getElementById("total")
+let expenseAmount = document.querySelectorAll(".expense-amount")
+expenseAmount.forEach(item => console.log(item.textContent.replace("R$","").replace(",", "")))
 
 let ilQuantity = document.querySelector("ul").querySelectorAll("li").length
 const quantity = document.getElementById("quantity")
 
-console.log(quantity)
 
 form.onsubmit = (event) => {
     event.preventDefault()
@@ -80,6 +81,7 @@ form.onsubmit = (event) => {
     
     ilQuantity += 1
     quantity.innerText = `${ilQuantity} despesas`
+    expenseAmount.forEach(item => console.log(item.textContent.replace("R$","").replace(",", "")))
 
 }
 quantity.innerText = `${ilQuantity} despesas`
