@@ -1,7 +1,9 @@
 const form = document.querySelector("form")
 
 
-const quantity = document.getElementById("#quantity").querySelectorAll("li").length
+let ilQuantity = document.querySelector("ul").querySelectorAll("li").length
+const quantity = document.getElementById("quantity")
+
 console.log(quantity)
 
 form.onsubmit = (event) => {
@@ -75,12 +77,16 @@ form.onsubmit = (event) => {
     expense.prepend(newExpense)
 
     const matematica = parseFloat(expenseValue.replace(".", "")) 
-    alert(expenseValueFormat)
+    
+    ilQuantity += 1
+    quantity.innerText = `${ilQuantity} despesas`
 
 }
-
+quantity.innerText = `${ilQuantity} despesas`
 
 function removeExpense(){
     const input = document.querySelector("li")
     input.remove()
+    ilQuantity -= 1
+    quantity.innerText = `${ilQuantity} despesas`
 }
